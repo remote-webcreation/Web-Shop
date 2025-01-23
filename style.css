@@ -14,7 +14,7 @@
     --secondary-color: white;
     --accent-color: #c8815f;
     --mywhite:rgb(236, 231, 231);
-    --background-color: #111111;
+    --background-color: #ffffff;
     --textcolor:rgb(28, 27, 27);
     --big-font: 4.5rem;
     --h2-font: 3.3rem;
@@ -28,4 +28,61 @@
 html, body {
     height: 100vh;
     /* font-weight: 400; */
+    background-color: var(--background-color);
+    color: var(--textcolor);
 }
+
+header {
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    padding: 1.25rem 14%;
+    transition: all .35s ease;
+    .logo {
+        font-size: 1.75rem;
+        font-weight: 700;
+        letter-spacing: 1;
+        color: var(--textcolor);
+    }
+    .navlist {
+        display: flex;
+        justify-content: center;
+        a {
+            color: var(--textcolor);
+            font-weight: 600;
+            padding: .625rem 1.5625rem;
+            font-size: var(--normal-font);
+            transition: all .36s ease;
+            &:hover {
+                color: var(--accent-color);
+            }
+        }
+    }
+    .header-icons i {
+        font-size: 2rem;
+        color: var(--textcolor);
+        margin-right: 1.25rem;
+        transition: all .36s ease;
+        &:hover {
+            color: var(--accent-color);
+        }  
+    }
+    #menu-icon {
+        font-size: 2.125rem;
+        color: var(--textcolor);
+        z-index: 10001;
+        margin-right: 1.25rem;
+        display: none;
+        &:hover {
+            color: var(--accent-color);
+            cursor: pointer;
+        }
+    }
+}
+
