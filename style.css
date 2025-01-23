@@ -183,14 +183,64 @@ main {
             grid-template-columns: repeat(auto-fit, minmax(21.875rem, auto));
             gap: 1.3rem;
             align-items: center;
-            margin-top: 4rem;
             width: 100%;
             justify-items: center;
+            margin-top: 4rem;
+            .row {
+                position: relative;
+                transition: all .35s ease;
+                border-radius: 1rem;
+                overflow: hidden;
+                &:hover {
+                    transform: scale(0.9) translateY(-0.3125rem);
+                    cursor: pointer;
+                }
+                img {
+                width: 100%;
+                max-width: 21.875rem;
+                height: auto;
+                }
+                .fea-text {
+                    position: absolute;
+                    top: 2.5rem;
+                    left: 3.125rem;
+                    h5 {
+                        font-size: 1.1875em;
+                        letter-spacing: .125rem;
+                        margin-bottom: 1rem;
+                    }
+                    p {
+                        color: #555;
+                        font-size: .9375em;
+                    }
+                }
+                
+                .arrow {
+                    position: absolute;
+                    bottom: 2.5rem;
+                    left: 3.125rem;
+                    justify-content: center;
+                    align-items: center;
+                    i {
+                        height: 2.1875rem;
+                        width: 2.1875rem;
+                        padding: .25rem;
+                        background: rgba(0, 0, 0, 0.761);
+                        border-radius: 50%;
+                        font-size: 1.25rem;
+                        color: var(--background-color);
+                        justify-content: center;
+                        align-items: center;
+                        display: inline;
+                        transition: all .35s ease;
+                        &:hover {
+                            cursor: pointer;
+                            background: var(--accent-color);
+                        }
+                    }
+                }
+            }
         }
     }
-}
-
-.row img {
-    width: 18.75rem;
 }
 
