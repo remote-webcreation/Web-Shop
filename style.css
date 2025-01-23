@@ -86,3 +86,58 @@ header {
     }
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    section {
+        padding: 1.25rem 14%;
+        width: 100%;
+        padding-top: 5rem;
+    }
+    .home {
+        min-height: 100vh;
+        width: 100%;
+        background: url(./images/Bild\ 23.01.25\ um\ 13.05\ \(1\).jpeg);
+        background-size: cover;
+        background-position: right center;
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        align-items: center;
+        .home-text {
+            h1 {
+                font-size: var(--big-font);
+                font-weight: 800;
+                line-height: 1.2;
+                letter-spacing: .6rem;
+                margin-bottom: 1.4rem;
+                span {
+                    font-size: var(--h2-font);
+                }
+            }
+            p {
+                font-size: var(--normal-font);
+                font-weight: 500;
+                margin-bottom: 3rem;
+                letter-spacing: .2rem;
+            }
+            .btn {
+                display: inline-block;
+                padding: .8125rem 1.5625rem;
+                background: var(--accent-color);
+                color: var(--background-color);
+                font-size: .9375em;
+                border-radius: .3125rem;
+                transition: all .36s ease;
+                &:hover {
+                    background-color: var(--textcolor);
+                    transform: translateY(-0.3125rem);
+                }
+
+            }
+        }
+    }
+}
+
