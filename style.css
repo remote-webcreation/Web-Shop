@@ -172,6 +172,7 @@ main {
     .featured {
         justify-content: center;
         width: 100%;
+        margin-top: 4rem;
         .center-text {
             text-align: center;
             h2 {
@@ -180,7 +181,7 @@ main {
         }
         .featured-content {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(21.875rem, auto));
+            grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
             gap: 1.3rem;
             align-items: center;
             width: 100%;
@@ -191,12 +192,14 @@ main {
                 transition: all .35s ease;
                 border-radius: 1rem;
                 overflow: hidden;
+                width: 100%;
+                max-width: 21.875rem;
                 &:hover {
                     transform: scale(0.9) translateY(-0.3125rem);
                     cursor: pointer;
                 }
                 img {
-                width: 100%;
+                width: auto;
                 max-width: 21.875rem;
                 height: auto;
                 }
@@ -233,12 +236,11 @@ main {
                         align-items: center;
                         display: inline;
                         transition: all .35s ease;
-                        &:hover {
-                            cursor: pointer;
-                            background: var(--accent-color);
-                        }
                     }
                 }
+            }
+            .row:hover i {
+                background-color: var(--accent-color);
             }
         }
     }
