@@ -99,7 +99,7 @@ main {
     display: flex;
     flex-direction: column;
     height: 100vh;
-    margin-top: 6rem;
+    margin-top: 2rem;
     padding: 1.25rem 14%;
     h2 {
         font-size: var(--h2-font);
@@ -109,7 +109,7 @@ main {
         flex-wrap: wrap;
         justify-content: space-between;
         gap: 3.125rem;
-        margin-top: 4rem;
+        margin-top: 3rem;
         width: 100%;
         .contact-form, .contact-info {
             flex: 1 1 45%; 
