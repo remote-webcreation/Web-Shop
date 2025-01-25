@@ -31,6 +31,7 @@ html, body {
     background-color: var(--background-color);
     color: var(--textcolor);
     background-color: var(--background-color);
+    line-height: 1.6;
 }
 
 header {
@@ -93,3 +94,135 @@ header.sticky {
     box-shadow: 0px 0px 10px rgba (0, 0, 0 / 10%);
 }
 
+main {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin-top: 6rem;
+    padding: 1.25rem 14%;
+    h2 {
+        font-size: var(--h2-font);
+    }
+    .contact-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 3.125rem;
+        margin-top: 4rem;
+        width: 100%;
+        .contact-form, .contact-info {
+            flex: 1 1 45%; 
+            padding: 1.25rem;
+            border-radius: .5rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+            width: 100%;
+        }
+        .contact-form {
+            background-color: var(--accent-color);
+            .input-group {
+                margin-bottom: 1rem;
+                label {
+                    display: block;
+                    margin-bottom: .3125rem;
+                    font-weight: bold;
+                }
+                input[type="text"], input[type="email"], textarea {
+                    width: 100%;
+                    padding: 1rem;
+                    border: 1px solid #ddd;
+                    border-radius: .25rem;
+                    box-sizing: border-box; 
+                    textarea {
+                        resize: vertical; 
+                    }
+                }
+            }
+            .submit-btn {
+                background-color: var(--textcolor);
+                color: white;
+                padding: 10px 15px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                transition: background-color 0.3s; 
+                &:hover {
+                    background-color: rgb(47, 47, 47);
+                }
+            }
+        }
+
+    
+        /* contact info  */
+        .contact-info {
+            background-color: var(--textcolor);
+            color: var(--background-color);
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            text-align: flex-start;
+            padding: 2rem;
+            h3 {
+                font-size: var(--h3-font);
+                margin-top: 1rem;
+                text-align: flex-start;
+                width: 100%;
+            }
+            .items {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 100%;
+                .info-item {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 1rem;
+                    gap: .5rem;
+                    p {
+                        font-size: 1.125em;
+                    }
+                    .contacticon {
+                        margin-right: .5rem;
+                        color: rgb(111, 109, 109);
+                        font-size: 1.2em;
+                        &:hover {
+                            color: var(--accent-color);
+                        }
+                    }
+                    .phone {
+                        color: var(--background-color);
+                        &:hover {
+                            color: var(--accent-color);
+                        }
+                    }
+                    .mail {
+                        color: var(--background-color);
+                        text-decoration: underline;
+                        &:hover {
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+
+            .social-links {
+                margin-top: 1rem;
+                margin-bottom: 2rem;
+                text-align: center;
+                a {
+                    display: inline-block;
+                    margin: 0 1rem;
+                    font-size: 2.5em;
+                    color: var(--accent-color);
+                    transition: color 0.3s;
+                    &:hover {
+                        color: var(--background-color);
+                    }
+                }
+                
+            }
+        }    
+    }
+}
