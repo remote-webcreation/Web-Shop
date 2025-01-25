@@ -50,6 +50,9 @@ header {
         font-weight: 700;
         letter-spacing: 1;
         color: var(--textcolor);
+        .logo-style {
+            color: var(--accent-color);
+        }
     }
     .navlist {
         display: flex;
