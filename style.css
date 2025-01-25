@@ -193,7 +193,7 @@ main {
                 border-radius: 1rem;
                 overflow: hidden;
                 width: 100%;
-                max-width: 21.875rem;
+                max-width: 18.75rem;
                 &:hover {
                     transform: scale(0.9) translateY(-0.3125rem);
                     cursor: pointer;
@@ -250,10 +250,13 @@ main {
         flex-direction: column;
         justify-content: center;
         width: 100%;
+        background-color:rgba(96, 81, 69, 0.776);
+        padding-bottom: 4rem;
         h2 {
             text-align: center;
             margin-top: 4rem;
             font-size: var(--h3-font);
+            color: rgb(243, 233, 233);
         }
         .categories {
             display: flex;
