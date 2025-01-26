@@ -144,22 +144,29 @@ main {
             background-color: var(--textcolor);
             color: var(--background-color);
             width: 100%;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
             display: flex;
             flex-direction: column;
             text-align: flex-start;
             padding: 2rem;
+            height: fit-content;
+            gap: 1rem;
             h3 {
                 font-size: var(--h3-font);
                 margin-top: 1rem;
                 width: 100%;
+            }
+            p {
+                font-size: 1.125em;
+                align-self: flex-start;
             }
             .items {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 width: 100%;
+                margin-top: 1.5rem;
                 .info-item {
                     display: flex;
                     align-items: center;
@@ -194,7 +201,6 @@ main {
 
             .social-links {
                 margin-top: 1rem;
-                margin-bottom: 2rem;
                 text-align: center;
                 a {
                     display: inline-block;

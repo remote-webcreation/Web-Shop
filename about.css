@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Open Sans", sans-serif;
+    scroll-behavior: smooth;
+    /* font-style: normal; */
+}
+
+:root {
+    --primary-color:rgb(13, 13, 13);
+    --secondary-color: #CECED0;
+    --accent-color: #c8815f;
+    --mywhite:rgb(236, 231, 231);
+    --background-color: #ffffff;
+    --textcolor:rgb(28, 27, 27);
+    --big-font: 4.5rem;
+    --h2-font: 3.3rem;
+    --h3-font: 2rem;
+    --normal-font: 1rem;
+}
+
+/* Google Font Open Sans */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+
+main {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+    gap: 0rem;
+    box-sizing: border-box;
+    section {
+        margin-bottom: 40px;
+        h2 {
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #007bff; /* Blaue Überschriften */
+        }
+    }
+}

@@ -25,6 +25,32 @@
 /* Google Font Open Sans */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
+#back-to-top {
+    position: fixed; 
+    bottom: 2rem; 
+    right: 2rem; 
+    cursor: pointer;
+    opacity: 0.7;
+    background-color: rgba(0, 0, 0, 0); 
+    transition: opacity 0.3s ease; 
+    transition: color 0.3s ease;
+    z-index: 1000; 
+    font-size: 3rem;
+    color: rgb(52, 38, 31);
+    border: none;
+    justify-content: center;
+    align-items: center;
+    &:hover {
+        color: var(--background-color);
+        opacity: 0.7;
+    }
+    &:active {
+        color: #f0a37f;
+        opacity: 0.8;
+
+    }
+}
+
 html, body {
     height: 100vh;
     /* font-weight: 400; */
@@ -495,11 +521,11 @@ footer {
     position: relative;
     color: var(--secondary-color);
     .footer-menus {
-        margin-top: 2rem;
+        margin: 2rem 0;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        gap: 2rem;
+        gap: 3rem;
         padding: 3rem 14%;
         width: 100%;
         flex-wrap: wrap;
@@ -522,36 +548,44 @@ footer {
     }
     .social {
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 3rem;
-        width: 75%;
-        border-top: 1px solid rgb(100, 100, 100);
-        padding: 3rem 0;
+        width: 80%;
+        border-top: 1px solid rgba(96, 81, 69, 0.271);
         height: auto;
-        font-size: 2.5em;
-        margin-top: 1rem;
+        padding: 2rem 0;
         margin-bottom: 2rem;
-        a {
-            width: 4rem;
-            height: 4rem;
+        gap: 3rem;
+        .logo {
+            font-size: 1.75rem;
+            font-weight: 700;
+            letter-spacing: 1;
             color: var(--secondary-color);
-            transition: color 0.35s ease;
+            margin-top: 2rem;
+            .logo-style {
+                color: var(--accent-color);
+            }
+        }
+
+        .footersocials {
+            display: flex;
             justify-content: center;
             align-items: center;
-            i {
-                justify-content: center;
-                align-items: center;
-                border: 1px solid var(--accent-color);
-                border-radius: 50%;
-                padding: .5rem;
-                transition: color 0.35s ease;
+            gap: 6rem;
+            font-size: 3em;
+            transition: all .35s ease;
+            a i {
+                color: var(--textcolor);
                 &:hover {
-                    background-color: var(--accent-color);
-                    color: var(--textcolor);
+                    color: var(--accent-color);
+                }
+                &:active {
+                    color: var(--secondary-color);
                 }
             }
         }
+
     }
     .copyright {
         width: 100%;
