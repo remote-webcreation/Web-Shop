@@ -12,12 +12,12 @@
 </head>
 <body>
     <header>
-        <a href="#" class="logo">Dancao</a>
+        <a href="#" class="logo">Dan <span class="logo-style">ç</span>ao</a>
 
         <ul class="navlist">
             <li><a href="./index.html">Home</a></li>
-            <li><a href="#featured">Featured</a></li>
-            <li><a href="#new">New</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Store</a></li>
             <li><a href="./contact.html">Contact</a></li>
         </ul>
 
@@ -36,21 +36,57 @@
 
             <div class="contact-form">
 
-                <form action="#" method="post">
+                <form id="contactForm" 
+                action="#" 
+                method="post">
                     <div class="input-group">
                         <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required>
+                        <input 
+                        type="text" 
+                        id="name" 
+                        name="name" 
+                        placeholder="First name, last name..."
+                        required>
                     </div>
                     <div class="input-group">
                         <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
+                        <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        placeholder="Enter your email adress..."
+                        required>
+                    </div>
+                    <div class="input-group">
+                        <label for="tel">Phone</label>
+                        <div class="phone-inputs">
+                            <input 
+                            class="country-code"
+                            type="text" id="country-code" name="country-code" 
+                            pattern="\+[0-9]*" title="Please enter a valid country code" 
+                            placeholder="+1" 
+                            required>
+                            <input 
+                            type="tel" 
+                            id="phone" 
+                            name="phone" 
+                            pattern="[0-9]*" 
+                            placeholder="Enter your number..."
+                            title="Please enter a valid phone number" 
+                            required>
+                        </div>
                     </div>
                     <div class="input-group">
                         <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
+                        <textarea 
+                        id="message" name="message" 
+                        rows="5" 
+                        placeholder="Leave a message..."
+                        required></textarea>
                     </div>
                     <button type="submit" class="submit-btn">Send Message</button>
                 </form>
+                <p id="confirmationMessage" class="confirmation-message" style="display: none;">Thank you! Your message has been sent.</p>
 
             </div>
 
@@ -83,8 +119,48 @@
         </section>
     </main>
 
-    <!-- custom js link -->
+            <footer>
+            <div class="footer-menus">
+                <ul>
+                    <li><a href="#featured">Categories</a></li>
+                    <li><a href="#">New Arrivals</a></li>
+                    <li><a href="#woman">Woman Dance Fashion</a></li>
+                    <li><a href="#man">Man Dance Fashion</a></li>
+                </ul>
+
+                <ul>
+                    <li><a href="#featured">Categories</a></li>
+                    <li><a href="#">New Arrivals</a></li>
+                    <li><a href="#woman">Woman Dance Fashion</a></li>
+                    <li><a href="#man">Man Dance Fashion</a></li>
+                </ul>
+
+                <ul>
+                    <li><a href="#featured">Categories</a></li>
+                    <li><a href="#">New Arrivals</a></li>
+                    <li><a href="#woman">Woman Dance Fashion</a></li>
+                    <li><a href="#man">Man Dance Fashion</a></li>
+                </ul>
+            </div>
+            <div class="social">
+                <a href="#"><i class='bx bxl-facebook'></i></a>
+                    <a href="#"><i class='bx bxl-twitter'></i></a>
+                    <a href="#"><i class='bx bxl-instagram-alt'></i></a>
+            </div>
+            <div class="copyright">
+                <small>© 2025 Dançao, Inc. All Rights Reserved</small>
+            </div>
+        </footer>
+
+    <!-- Header js -->
     <script src="./script.js"></script>
+
+    <!--  Contact form -->
+
+    <script src="./contact.js"></script>
+
+
+    
     
 </body>
 </html>

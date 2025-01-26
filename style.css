@@ -70,11 +70,16 @@ header {
     }
     .header-icons i {
         font-size: 2rem;
-        color: var(--textcolor);
+        color: var(--secondary-color);
+        background-color: var(--accent-color);
         margin-right: 1.25rem;
         transition: all .36s ease;
+        border-radius: 50%;
+        padding: .3rem;
+        transition: all .36s ease;
         &:hover {
-            color: var(--accent-color);
+            color: var(--textcolor);
+            background-color: var(--accent-color);
         }  
     }
     #menu-icon {
@@ -91,9 +96,49 @@ header {
 }
 
 header.sticky {
-    background-color: #2e2e30bc;
+    background-color: #00000076;
     padding: .875rem 14%;
     box-shadow: 0px 0px 10px rgba (0, 0, 0 / 10%);
+    .logo {
+        font-size: 1.75rem;
+        font-weight: 700;
+        letter-spacing: 1;
+        color: var(--background-color);
+        .logo-style {
+            color: var(--accent-color);
+        }
+        &:hover {
+            color: var(--accent-color);
+            .logo-style {
+                color: var(--background-color);
+            }
+        }
+    }
+    .navlist {
+        display: flex;
+        justify-content: center;
+        a {
+            color: var(--background-color);
+            font-weight: 600;
+            padding: .625rem 1.5625rem;
+            font-size: var(--normal-font);
+            transition: all .36s ease;
+            &:hover {
+                color: var(--accent-color);
+            }
+        }
+    }
+    .header-icons i {
+        font-size: 2rem;
+        color: var(--accent-color);
+        margin-right: 1.25rem;
+        transition: all .36s ease;
+        background-color: rgba(0, 0, 0, 0);
+        &:hover {
+            color: var(--background-color);
+            background-color: var(--accent-color);
+        }  
+    }
 }
 
 main {
@@ -170,30 +215,17 @@ main {
             }
         }
     }
-    .woman {
-        background-image: url(./images/Bild\ 25.01.25\ um\ 21.55.jpeg);
-        background-position: center;
-        background-size: cover;
-        height: 100vh;
-    }
-
-    .man {
-        background-image: url(https://ermesdance.com/cdn/shop/files/Marco_Banner.png?v=1706174134&width=1600);
-        height: 100vh;
-    }
-
-
     .featured-cat {
         display: flex;
         flex-direction: column;
         justify-content: center;
         width: 100%;
-        background-color:rgba(96, 81, 69, 0.776);
+        background-color:var(--secondary-color);
         padding-bottom: 4rem;
         height: auto;
         h2 {
             text-align: center;
-            margin-top: 4rem;
+            margin-top: 2rem;
             font-size: var(--h3-font);
             color: var(--textcolor);
         }
@@ -274,6 +306,17 @@ main {
                 
             }
         }
+    }
+    .woman {
+        background-image: url(./images/Bild\ 25.01.25\ um\ 21.55.jpeg);
+        background-position: center;
+        background-size: cover;
+        height: 100vh;
+    }
+
+    .man {
+        background-image: url(https://ermesdance.com/cdn/shop/files/Marco_Banner.png?v=1706174134&width=1600);
+        height: 100vh;
     }
 
     .danceshoes {
@@ -360,7 +403,6 @@ main {
     }
 }
 
-
 .arrow {
     justify-content: center;
     align-items: center;
@@ -375,5 +417,85 @@ main {
         i {
             align-items: center;
         }
+    }
+}
+
+footer {
+    width: 100%;
+    height: auto;
+    background-color: rgba(96, 81, 69, 0.776);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: var(--secondary-color);
+    .footer-menus {
+        margin-top: 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2rem;
+        padding: 3rem 14%;
+        width: 100%;
+        flex-wrap: wrap;
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            li a {
+                font-size: 1.125rem;
+                font-weight: 600;
+                transition: color 0.35s ease;
+                color: var(--textcolor);
+                &:hover {
+                    text-decoration: underline;
+
+                }
+
+            }
+        }
+    }
+    .social {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+        width: 75%;
+        border-top: 1px solid rgb(100, 100, 100);
+        padding: 3rem 0;
+        height: auto;
+        font-size: 2.5em;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+        a {
+            width: 4rem;
+            height: 4rem;
+            color: var(--secondary-color);
+            transition: color 0.35s ease;
+            justify-content: center;
+            align-items: center;
+            i {
+                justify-content: center;
+                align-items: center;
+                border: 1px solid var(--accent-color);
+                border-radius: 50%;
+                padding: .5rem;
+                &:hover {
+                    background-color: var(--accent-color);
+                    color: var(--textcolor);
+                }
+            }
+        }
+    }
+    .copyright {
+        width: 100%;
+        height: auto;
+        background-color: var(--primary-color);
+        position: absolute;
+        bottom: 0;
+        color: rgb(100, 100, 100);
+        text-align: center;
+        padding: .5rem;
     }
 }
