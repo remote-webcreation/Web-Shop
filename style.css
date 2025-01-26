@@ -96,7 +96,7 @@ header {
 }
 
 header.sticky {
-    background-color: #00000076;
+    background-color: #0000007e;
     padding: .875rem 14%;
     box-shadow: 0px 0px 10px rgba (0, 0, 0 / 10%);
     .logo {
@@ -104,8 +104,10 @@ header.sticky {
         font-weight: 700;
         letter-spacing: 1;
         color: var(--background-color);
+        transition: color 0.35s ease;
         .logo-style {
             color: var(--accent-color);
+            transition: color 0.35s ease;
         }
         &:hover {
             color: var(--accent-color);
@@ -220,7 +222,7 @@ main {
         flex-direction: column;
         justify-content: center;
         width: 100%;
-        background-color:var(--secondary-color);
+        background-color:var(--accent-color);
         padding-bottom: 4rem;
         height: auto;
         h2 {
@@ -247,6 +249,7 @@ main {
                 align-items: center;
                 text-align: center;
                 overflow: hidden;
+                transition: 0.35s ease;
                 .boxlink {
                     width: 100%;
                     height: 100%;
@@ -255,7 +258,7 @@ main {
                     justify-content: center;
                     align-items: center;
                     color: var(--textcolor);
-                    transition: all .35s ease;
+                    transition: all .35s ease-in-out, all.35s ease;
                     overflow: hidden;
                     img {
                         width: 100%;
@@ -286,7 +289,6 @@ main {
 
             .cat-box:hover {
                 transform: scale(1.125) translateY(-0.3125rem);
-                transition: 0.35s ease;
                 cursor: pointer;
                 img {
                     border-top-left-radius: 1rem;
@@ -297,27 +299,46 @@ main {
                 h5 {
                     color: var(--accent-color);
                 }
-                .arrow {
-                    opacity: 1; 
-                    transform: translateY(0);
-                    transition: opacity 0.35s ease, color .35s ease;
-                    background-color: var(--accent-color);
-                }
                 
             }
         }
     }
-    .woman {
-        background-image: url(./images/Bild\ 25.01.25\ um\ 21.55.jpeg);
+    .man, .woman {
         background-position: center;
         background-size: cover;
+        position: relative;
         height: 100vh;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); 
+            transition: background 0.35s ease;
+            z-index: 1;
+        }
+        &:hover::before {
+            background: rgba(0, 0, 0, 0.7); 
+        }
+        h2 {
+            text-align: center;
+            margin-top: 4rem;
+            font-size: var(--h3-font);
+            color: var(--secondary-color);
+            position: relative;
+            z-index: 2;
+        }
+    }
+    .woman {
+        background-image: url(./images/Bild\ 25.01.25\ um\ 21.55.jpeg);
     }
 
     .man {
         background-image: url(https://ermesdance.com/cdn/shop/files/Marco_Banner.png?v=1706174134&width=1600);
-        height: 100vh;
     }
+    
 
     .danceshoes {
         justify-content: center;
@@ -403,23 +424,6 @@ main {
     }
 }
 
-.arrow {
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: .5rem;
-    opacity: 0;
-    a {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: var(--background-color);
-        i {
-            align-items: center;
-        }
-    }
-}
-
 footer {
     width: 100%;
     height: auto;
@@ -444,7 +448,7 @@ footer {
             flex-direction: column;
             gap: 2rem;
             li a {
-                font-size: 1.125rem;
+                font-size: 1.125em;
                 font-weight: 600;
                 transition: color 0.35s ease;
                 color: var(--textcolor);
@@ -481,6 +485,7 @@ footer {
                 border: 1px solid var(--accent-color);
                 border-radius: 50%;
                 padding: .5rem;
+                transition: color 0.35s ease;
                 &:hover {
                     background-color: var(--accent-color);
                     color: var(--textcolor);
