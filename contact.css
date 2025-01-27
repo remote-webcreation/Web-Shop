@@ -97,7 +97,7 @@ main {
         .contact-form {
             background-color: var(--accent-color);
             border: 1px solid  #d0835f;
-            box-shadow: 8px 8px 16px  #ad6b4c, -8px -8px 16px  #e1916b; /* neumorphism-shadow */
+            box-shadow: 8px 8px 16px  #ad6b4c, -8px -8px 16px  #e1916b; /* added neumorphism-shadow */
             .input-group {
                 margin-bottom: 1rem;
                 label {

@@ -275,7 +275,8 @@ main {
         justify-content: center;
         width: 100%;
         background-color:var(--accent-color);
-        padding: 4rem 0;
+        padding-top: 2rem ;
+        padding-bottom: 4rem;
         height: auto;
         h2 {
             text-align: center;
@@ -335,12 +336,15 @@ main {
                         border-radius: .5rem;
                     }
                 }
+
+                
             }
              /* added Hover Effect to view content */
 
             .cat-box:hover {
                 transform: scale(1.125) translateY(-0.3125rem);
                 cursor: pointer;
+                animation-play-state: paused;
                 img {
                     border-top-left-radius: 1rem;
                     border-top-right-radius: 1rem;
@@ -359,6 +363,8 @@ main {
         background-size: cover;
         position: relative;
         height: 100vh;
+        justify-content: center;
+        text-align: center;
         &::before {
             content: '';
             position: absolute;
@@ -374,15 +380,12 @@ main {
             background: rgba(0, 0, 0, 0.59); 
         }
         h2 {
-            text-align: left;
-            margin-top: 2rem;
+            text-align: center;
             font-size: var(--h3-font);
             color: var(--secondary-color);
-            position: absolute;
-            bottom: 4rem;
-            left: 4rem;
-            transform: translateY(50%);
             z-index: 2;
+            position: relative;
+            margin: 2rem 0;
         }
     }
     .woman {
@@ -396,6 +399,7 @@ main {
         min-height: 100vh;
         justify-content: center;
         align-items: center;
+        padding: 2rem 14%;
         .men-content {
             display: flex;
             flex-wrap: wrap;
@@ -406,12 +410,12 @@ main {
             height: 100%;
             position: relative;
             z-index: 2;
-            padding-top: 2rem;
-            margin: 0;
+            padding-top: 1rem;
+            margin: 2rem 0;
             .men-cards {
                 position: relative;
                 background-color: rgba(254, 190, 144, 0.561);
-                width: 25rem;
+                width: fit-content;
                 height: 80%;
                 border-radius: 1rem;
                 display: flex;
@@ -429,7 +433,7 @@ main {
                 }
                 .productcard-men {
                     background-color: var(--textcolor);
-                    width: 80%;
+                    width: 90%;
                     border-radius: .5rem;
                     display: flex;
                     flex-direction: column;
@@ -447,21 +451,28 @@ main {
                         box-shadow: 0 6px 12px rgba(187, 141, 107, 0.561);
                     }
                     img {
+                        max-width: 16.1875rem;
                         width: 100%;
                         background-position: center;
                         background-size: cover;
                         border-radius: 0.5rem;
+                        transition: all .35 ease-in-out;
+                        &:hover {
+                            transform: scale(1.1);
+                            cursor: pointer;
+                        }
                     }
                     h5 {
-                        font-size: 1em;
+                        font-size: .9em;
                         color: var(--secondary-color);
+                        padding: 0 1rem;
                     }
                     .chart-line {
                         width: 100%;
-                        padding-right:  1.5rem;
                         display: flex;
                         justify-content: space-between;
                         align-items: center;
+                        padding: 0 1rem;
                         small {
                             color: rgb(86, 86, 86);
                         }
@@ -491,6 +502,7 @@ main {
                         display: flex;
                         align-items: center;
                         justify-content: space-between;
+                        padding: 0 1rem;
                         p {
                             color: rgb(164, 162, 162);
                         }
@@ -517,8 +529,6 @@ main {
             }
         }
     }
-
-    
 
     .danceshoes {
         justify-content: center;
@@ -692,5 +702,26 @@ footer {
         color: rgb(100, 100, 100);
         text-align: center;
         padding: .5rem;
+    }
+}
+
+@media (max-width: 1000px) {
+    header {
+        padding: .4375rem 4%;
+        transition: .2s;
+    }
+    header.sticky {
+        padding: .875rem 4%;
+        transition: .2s;
+    }
+    section{
+        padding: 5rem 4%;
+        transition: .1s;
+    }
+}
+
+@media (max-width: 670px) {
+    #menu-icon {
+        display: block;
     }
 }
