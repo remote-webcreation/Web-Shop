@@ -723,16 +723,45 @@ footer {
 
 @media (max-width: 670px) {
     header {
-        padding: 1rem 5%; 
+        /* padding: 1rem 5%;  */
         .navlist {
-            display: none; 
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 17.5rem; 
+            height: 100vh;  
+            background-color: var(--secondary-color);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 9.375rem 1.875rem;
+            transition: all .45s ease;
+            color: var(--textcolor);
+            a {
+                display: block;
+                margin: 1.2rem 0;
+            }
+        }
+        .header-icon {
+            display: inline-flex;
         }
         .bx.bx-shopping-bag {
             background-color: rgba(0, 0, 0, 0);
             color: var(--accent-color);
         }
-        
     }
+    
+    header.sticky {
+        padding: 1rem 5%; 
+        /* .navlist {
+            display: none; 
+        } */
+        .bx.bx-shopping-bag {
+            background-color: rgba(0, 0, 0, 0);
+            color: var(--accent-color);
+        }
+    }
+
     #menu-icon {
         display: block;
     }
