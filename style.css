@@ -98,22 +98,27 @@ header {
             }
         }
     }
-    .header-icons i {
-        font-size: 2rem;
-        color: var(--secondary-color);
-        background-color: var(--accent-color);
-        margin-right: 1.25rem;
-        transition: all .36s ease;
-        border-radius: 50%;
-        padding: .3rem;
-        transition: all .36s ease;
-        &:hover {
-            color: var(--mywhite);
+    .header-icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        i {
+            font-size: 2rem;
+            color: var(--secondary-color);
             background-color: var(--accent-color);
-        }  
-        &:active {
-            color: var(--accent-color);
-            background-color: var(--mywhite);
+            margin-right: 1.25rem;
+            transition: all .36s ease;
+            border-radius: 50%;
+            padding: .3rem;
+            transition: all .36s ease;
+            &:hover {
+                color: var(--mywhite);
+                background-color: var(--accent-color);
+            }  
+            &:active {
+                color: var(--accent-color);
+                background-color: var(--mywhite);
+            }
         }
     }
 }
@@ -156,21 +161,27 @@ header.sticky {
             }
         }
     }
-    .header-icons i {
-        font-size: 2rem;
-        color: rgba(239, 235, 235, 0.887);
-        margin-right: 1.25rem;
-        transition: all .36s ease;
-        background-color: var(--accent-color);
-        &:hover {
-            color: var(--accent-color);
-            background-color: rgb(200, 192, 192);
-        }  
-        &:active {
-            color: var(--accent-color);
-            background-color: rgba(245, 222, 179, 0.036);
-            border: 1px solid var(--secondary-color);
+    .header-icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        i {
+            font-size: 2rem;
+            color: rgba(239, 235, 235, 0.887);
+            margin-right: 1.25rem;
+            transition: all .36s ease;
+            background-color: var(--accent-color);
+            &:hover {
+                color: var(--accent-color);
+                background-color: rgb(200, 192, 192);
+            }  
+            &:active {
+                color: var(--accent-color);
+                background-color: rgba(245, 222, 179, 0.036);
+                border: 1px solid var(--secondary-color);
+            }
         }
+        
     }
 }
 
@@ -727,7 +738,7 @@ footer {
         .navlist {
             position: absolute;
             top: 100%;
-            left: 0;
+            left: -100%;
             width: 17.5rem; 
             height: 100vh;  
             background-color: var(--secondary-color);
@@ -742,8 +753,8 @@ footer {
                 margin: 1.2rem 0;
             }
         }
-        .header-icon {
-            display: inline-flex;
+        .navlist-open {
+            left: 0;
         }
         .bx.bx-shopping-bag {
             background-color: rgba(0, 0, 0, 0);
