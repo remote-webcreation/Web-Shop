@@ -51,18 +51,17 @@ main {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 1.5rem;
+        gap: 2rem;
         h2 {
             font-weight: 700;
-
+            margin: 0;
         }
         h4 {
-            text-align: center;
+            text-align: start;
             line-height: 2;
             color: rgb(126, 124, 124);
             font-size: 1.125em;
-            width: 50%;
-            margin-top: 2rem;
+            margin-top: 1rem;
         }
         .logoabout {
             font-size: 2.5em;
@@ -90,7 +89,7 @@ main {
 
     }
     section {
-        width: 100%;
+        width: 80%;
         border-radius: 1rem;
         background-color: var(--textcolor);
         color: var(--secondary-color);

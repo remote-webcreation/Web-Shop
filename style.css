@@ -122,7 +122,7 @@ header {
         }
     }
 }
-
+/* sticky header */
 header.sticky {
     background-color: #0000007e;
     padding: .875rem 14%;
@@ -184,6 +184,7 @@ header.sticky {
         
     }
 }
+
 
 main {
     display: flex;
@@ -511,6 +512,7 @@ main {
             margin: 2rem 0;
         }
     }
+
     .woman {
         background-image: url(./images/Bild\ 25.01.25\ um\ 21.55.jpeg);
         width: 100%;
@@ -535,10 +537,10 @@ main {
                 position: relative;
                 background-color: rgba(254, 190, 144, 0.561);
                 width: fit-content;
-                height: 80%;
+                height: auto;
                 border-radius: 1rem;
                 display: flex;
-                gap: 1rem;
+                gap: 2rem;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
@@ -546,9 +548,7 @@ main {
                 margin-bottom: 4.5rem;
                 transition: all .35s ease;
                 &:hover {
-                    transform: scale(1.1);
-                    
-                    
+                    transform: translateY(-2px); 
                 }
                 .productcard-men {
                     background-color: var(--textcolor);
@@ -566,7 +566,7 @@ main {
                     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
                     &:hover {
                         background-color: rgb(30, 30, 30);
-                        transform: translateY(-2px); 
+                        transform: scale(1.1); 
                         box-shadow: 0 6px 12px rgba(187, 141, 107, 0.561);
                     }
                     img {
@@ -577,7 +577,6 @@ main {
                         border-radius: 0.5rem;
                         transition: all .35 ease-in-out;
                         &:hover {
-                            transform: scale(1.1);
                             cursor: pointer;
                         }
                     }
@@ -676,7 +675,7 @@ main {
                 height: 80%;
                 border-radius: 1rem;
                 display: flex;
-                gap: 1rem;
+                gap: 2rem;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
@@ -684,9 +683,7 @@ main {
                 margin-bottom: 4.5rem;
                 transition: all .35s ease;
                 &:hover {
-                    transform: scale(1.1);
-                    
-                    
+                    transform: translateY(-2px); 
                 }
                 .productcard-men {
                     background-color: var(--textcolor);
@@ -704,8 +701,8 @@ main {
                     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
                     &:hover {
                         background-color: rgb(30, 30, 30);
-                        transform: translateY(-2px); 
                         box-shadow: 0 6px 12px rgba(187, 141, 107, 0.561);
+                        transform: scale(1.1);
                     }
                     img {
                         max-width: 16.1875rem;
