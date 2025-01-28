@@ -30,9 +30,9 @@ main {
     display: flex;
     flex-direction: column;
     height: auto;
-    gap: 1.5rem;
+    gap: 3rem;
     margin-top: 4rem;
-    padding: 4rem 14%;
+    padding: 5rem 14%;
     h2 {
         font-size: var(--h3-font);
         margin-left: 2rem;
