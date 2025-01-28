@@ -194,7 +194,6 @@ main {
     margin: 0;
     gap: 0rem;
     box-sizing: border-box;
-
     section {
         padding: 1.25rem 14%;
         width: 100%;
@@ -285,6 +284,7 @@ main {
             text-align: center;
             font-size: var(--h3-font);
             color: var(--secondary-color);
+            margin: 1rem 0;
         }
         .categories {
             display: flex;
@@ -375,6 +375,7 @@ main {
         h2 {
             font-size: var(--h3-font);
             color: var(--background-color);
+            margin: 1rem 0;
         }
         .arrivals-content {
             display: flex;
@@ -509,7 +510,7 @@ main {
             color: var(--secondary-color);
             z-index: 2;
             position: relative;
-            margin: 2rem 0;
+            margin: 3rem 0;
         }
     }
 
