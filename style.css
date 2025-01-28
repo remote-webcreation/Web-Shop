@@ -870,6 +870,31 @@ main {
             }
         }
     }
+
+    .partners {
+        text-align: center;
+        padding: 3.125rem 0;
+        h2 {
+            margin-bottom: 1rem;
+            font-size: var(--h3-font);
+        }
+        .partner-logos {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 2.5rem 0;
+            gap: 3rem;
+            a img {
+                max-width: 12.5rem;
+                margin: 1rem;
+                border-radius: 1rem;
+                transition: all .35s ease;
+                &:hover {
+                    transform: scale(1.05);
+                }
+            }
+        }
+    }
 }
 
 footer {
