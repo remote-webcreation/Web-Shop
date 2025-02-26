@@ -77,8 +77,15 @@ header {
         font-weight: 700;
         letter-spacing: 1;
         color: var(--textcolor);
+        transition: color 0.35s ease;
         .logo-style {
             color: var(--accent-color);
+        }
+        &:hover {
+            color: var(--accent-color) ;
+            .logo-style {
+                color: var(--textcolor);
+            }
         }
     }
     .navlist {
@@ -227,8 +234,10 @@ main {
                     line-height: 1.2;
                     letter-spacing: .6rem;
                     margin-bottom: 1.4rem;
+                    color: var(--textcolor);
                     span {
-                        font-size: var(--h2-font);
+                        font-size: 1.5em;
+                        
                     }
                 }
                 p {
@@ -282,7 +291,7 @@ main {
         h2 {
             text-align: center;
             font-size: var(--h3-font);
-            color: var(--secondary-color);
+            color: var(--background-color);
             margin: 1rem 0;
         }
         .categories {
@@ -482,7 +491,7 @@ main {
                     
             }
 
-            }
+        }
             .new-card1 {
                 height: 17.1875rem;
                 border: .5px solid rgb(197, 197, 197);
@@ -545,7 +554,6 @@ main {
     }
 
     /* Slider animation */
-
     .arrivals-content .slider {
         animation: slide 60s linear infinite;
         display: flex;
@@ -581,7 +589,7 @@ main {
             width: 100%;
             height: 100%;
             background: rgba(0, 0, 0, 0.5); 
-            transition: background 0.35s ease;
+            transition: all 0.35s ease;
             z-index: 1;
         }
         &:hover::before {
@@ -608,9 +616,9 @@ main {
         .section-content {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-between;
+            justify-content: center;
             align-items: flex-start;
-            gap: 1rem;
+            gap: 2rem;
             width: 100%;
             height: 100%;
             position: relative;
@@ -619,30 +627,30 @@ main {
             margin: 2rem 0;
             .men-cards {
                 position: relative;
-                background-color: rgba(254, 190, 144, 0.561);
-                width: fit-content;
-                height: auto;
-                border-radius: 1rem;
+                background-color: rgba(254, 190, 144, 0.375);
+                width: auto;
+                height: fit-content;
+                border-radius: .5rem;
                 display: flex;
-                gap: 2rem;
+                gap: 1rem;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                padding: 2rem 1rem;
-                margin-bottom: 4.5rem;
+                padding: 1rem;
+                margin-bottom: 1rem;
                 transition: all .35s ease;
                 &:hover {
                     transform: translateY(-2px); 
                 }
                 .productcard-men {
                     background-color: var(--textcolor);
-                    width: 90%;
+                    width: 100%;
                     border-radius: .5rem;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
                     align-items: flex-start;
-                    gap: .9rem;
+                    gap: .1rem;
                     border: 1px var(--textcolor);
                     overflow: hidden;
                     color: var(--background-color);
@@ -650,11 +658,11 @@ main {
                     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
                     &:hover {
                         background-color: rgb(30, 30, 30);
-                        transform: scale(1.1); 
+                        transform: scale(1.05); 
                         box-shadow: 0 6px 12px rgba(187, 141, 107, 0.561);
                     }
                     img {
-                        max-width: 16.1875rem;
+                        max-width: 12.5rem;
                         width: 100%;
                         background-position: center;
                         background-size: cover;
@@ -667,14 +675,15 @@ main {
                     h5 {
                         font-size: .9em;
                         color: var(--secondary-color);
-                        padding: 0 1rem;
+                        margin-top: 1rem;
                     }
                     .chart-line {
                         width: 100%;
                         display: flex;
                         justify-content: space-between;
                         align-items: center;
-                        padding: 0 1rem;
+                        padding: 0 .5rem;
+                        margin-bottom: .8rem;
                         small {
                             color: rgb(86, 86, 86);
                         }
@@ -703,8 +712,8 @@ main {
                         width: 100%;
                         display: flex;
                         align-items: center;
-                        justify-content: space-between;
-                        padding: 0 1rem;
+                        justify-content: right;
+                        gap: 1.5rem;
                         p {
                             color: rgb(164, 162, 162);
                         }
@@ -727,7 +736,6 @@ main {
                         }
                     }
                 }
-
             }
         }
     }
@@ -873,17 +881,18 @@ main {
         align-items: center;
         width: 100%;
         padding: 4rem 14%;
+        background-color: var(--background-color);
         .center-text {
             text-align: center;
             h2 {
                 font-size: var(--h3-font);
-                color: var(--mywhite);
+                color: var(--textcolor);
             }
         }
         .danceshoes-content {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-            gap: 1.3rem;
+            grid-template-columns: repeat(auto-fit, minmax(9.375rem, 1fr));
+            gap: 2rem;
             align-items: center;
             width: 100%;
             justify-items: center;
@@ -964,15 +973,15 @@ main {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            margin: 2.5rem 0;
+            margin-top: 2.5rem;
             gap: 3rem;
             a img {
-                max-width: 18.75rem;
+                max-width: 15.625rem;
                 margin: 1rem;
                 border-radius: .25rem;
                 transition: all .35s ease;
                 &:hover {
-                    transform: scale(1.05);
+                    cursor: pointer;
                 }
             }
         }
@@ -1002,7 +1011,7 @@ footer {
             flex-direction: column;
             gap: 2rem;
             li a {
-                font-size: 1.125em;
+                font-size: 1rem;
                 font-weight: 500;
                 transition: color 0.35s ease;
                 color: var(--mywhite);
@@ -1023,12 +1032,11 @@ footer {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 80%;
+        width: 75%;
         border-top: 1px solid rgba(56, 49, 44, 0.271);
-        height: auto;
-        margin-bottom: 2rem;
-        gap: 2rem;
-
+        height: fit-content;
+        margin-bottom: 4rem;
+        gap: 3rem;
         .footersocials {
             display: flex;
             justify-content: center;
@@ -1036,24 +1044,31 @@ footer {
             gap: 6rem;
             font-size: 3em;
             transition: all .35s ease;
-            padding-top: 2rem;
-            a i {
-                color: var(--accent-color);
-                transition: all .35s ease;
-                &:hover {
+            padding-top: 3rem;
+            width: fit-content;
+            a {
+                i, svg {
+                    color: var(--textcolor);
+                    transition: all .35s ease;
+                    fill: var(--textcolor);
+                    margin: 0;
+                    &:hover {
                     color: var(--accent-color);
+                    fill: var(--accent-color);
+                    }
+                    &:active {
+                        color: var(--secondary-color);
+                    }
                 }
-                &:active {
-                    color: var(--secondary-color);
-                }
+
             }
         }
         .logo {
-            font-size: 1.75rem;
+            font-size: 2em;
             font-weight: 700;
             letter-spacing: 1;
             color: var(--secondary-color);
-            margin-bottom: 2rem;
+            margin-bottom: 1rem;
             .logo-style {
                 color: var(--accent-color);
             }
@@ -1089,7 +1104,7 @@ footer {
     }
 }
 
-@media (max-width: 1000px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
     header {
         padding: .4375rem 4%;
         transition: .2s;
@@ -1107,19 +1122,28 @@ footer {
         .footer-menus {
             ul li {
                 a {
-                    font-size: 2vw;
+                    font-size: 1.5vw;
                 }
             }
         }
     }
 }
 
-@media (max-width: 670px) {
+@media screen and (max-width: 670px) {
     header {
-        padding: 1rem 5%; 
+        padding: 1rem 1vw; 
         .logo {
             margin-left: 3rem;
             transition: all .45s ease;
+        }
+        .bx.bx-shopping-bag {
+            border: 1px solid var(--secondary-color);
+            font-size: 1.5rem;
+            padding: .5rem;
+            &:hover {
+                color: var(--textcolor);
+                background-color: var(--secondary-color);
+            }
         }
         .navlist {
             position: absolute;
@@ -1141,6 +1165,10 @@ footer {
         }
         .navlist-open {
             left: 0;
+            a {
+                display: block;
+                margin: 1.2rem 0;
+            }
         }
         .bx.bx-shopping-bag {
             background-color: var(--secondary-color);
@@ -1149,11 +1177,13 @@ footer {
     }
     
     header.sticky {
-        padding: 1rem 5%; 
+        padding: 1rem 1%; 
         .bx.bx-shopping-bag {
             color: var(--accent-color);
             background-color: #55555500;
             border: 1px solid var(--secondary-color);
+            font-size: 1.5rem;
+            padding: .5rem;
             &:hover {
                 background-color: var(--secondary-color);
             }
@@ -1173,14 +1203,19 @@ footer {
 
     .left {
         width: 70%;
+        .heroarrivals {
+            font-size: .125em;
+            
+        }
+        .btn {
+            padding: 0;
+        }
     }
     .right {
         width: 30%;
     }
+    
 
-    h1 {
-        font-size: .1rem;
-    }
 
     #menu-icon {
         display: block;
@@ -1189,6 +1224,10 @@ footer {
 
     .new-arrivals {
         padding-bottom: 2rem;
+        .new-card {
+            width: 6.25rem;
+            padding: .5rem;
+        }
     }
 
     .man, .woman {
@@ -1201,6 +1240,73 @@ footer {
         }
     }
 
+    #woman {
+        padding: 0;
+        .section-content {
+            padding: 0;
+            justify-content: center;
+            gap: 1rem;
+            .men-cards {
+                width: 12.5rem;
+                .productcard-men {
+                    justify-content: center;
+                    text-align: left;
+                    &:hover {
+                        cursor: pointer;
+                    }
+                    img {
+                        max-width: auto;
+                        justify-self: center;
+                    }
+                    h5 {
+                        width: 100%;
+                        padding: 0;
+                    }
+                    .chart-line {
+                        width: 100%;
+                        padding: 0;
+                        
+                    }
+                    .calltoaction {
+                        width: 100%;
+                        padding: 0;
+                        button {
+                            font-size: .7em;
+                        }
+                    }
+    
+                }
+            }
+        }
+
+        
+    }
+    .partners {
+        text-align: center;
+        padding-top: 2.5rem;
+        padding-bottom: 0;
+        h2 {
+            margin-bottom: 0;
+            font-size: var(--h3-font);
+            color: var(--background-color);
+        }
+        .partner-logos {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 1.5rem 0;
+            gap: .5rem;
+            a img {
+                max-width: 7.8125rem;
+                margin: .5rem;
+                border-radius: .25rem;
+                transition: all .35s ease;
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
 
     footer {
         .footer-menus {
